@@ -9,7 +9,7 @@ USEOUTPUT=0
 USEARRAY=0
 APPEND=0
 RESOLUTION=300
-MODE=Lineart
+MODE="\"24bit Color[Fast]\""
 MODE_CHANGED=0
 MODE_HW_DEFAULT=0
 SCRIPT="$DIR/scan_perpage"
@@ -85,7 +85,7 @@ while [[ $# > 0 ]]; do
 
   -l|--outputlist) shift; USEARRAY=1; OUTPUTARR=(); OUTPUTARR+=("$1") ;;
 
-  -x|--device) shift; DEVICE="$1";;
+  -x|--device) shift; DEVICE=$1;;
 
   -xo|--driver-options) shift; DRIVER_OPTION=$1;;
 
